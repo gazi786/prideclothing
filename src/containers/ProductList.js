@@ -42,8 +42,7 @@ class ProductList extends React.Component {
     </Segment>)}
         <Item.Group divided>
           {data.map(item => {
-            return (
-              <Item key={item.id}>
+            return <Item key={item.id}>
                 <Item.Image src={item.image} />
                 <Item.Content>
                   <Item.Header as='a'>{item.title}</Item.Header>
@@ -60,7 +59,6 @@ class ProductList extends React.Component {
                   </Item.Extra>
                 </Item.Content>
               </Item>
-            )
           })}
         </Item.Group>
       </Container>
