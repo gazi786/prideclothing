@@ -19,7 +19,7 @@ class CustomLayout extends React.Component {
     const { authenticated } = this.props;
     return (
       <div>
-        <Menu fixed="top" inverted>
+        <Menu inverted>
           <Container>
             <Link to="/">
               <Menu.Item header>Home</Menu.Item>
@@ -37,7 +37,10 @@ class CustomLayout extends React.Component {
                   <Menu.Item header>Signup</Menu.Item>
                 </Link>
               </React.Fragment>
-            )}
+                        )}
+                     <Link to="/products">
+              <Menu.Item header>Products</Menu.Item>
+            </Link>
           </Container>
         </Menu>
 
