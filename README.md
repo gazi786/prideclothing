@@ -1,10 +1,10 @@
-# Django React Boilerplate
+# Django React Ecommerce
 
-[![alt text](https://github.com/justdjango/django-react-boilerplate/blob/master/thumbnail.png "Logo")](https://youtu.be/YKYVv0gm_0o)
+[![alt text](https://github.com/justdjango/django-react-ecommerce/blob/master/thumbnail.png "Logo")](https://youtu.be/RG_Y7lIDXPM)
 
-This repository contains a boilerplate project setup for Django and React. The project contains backend user authentication with the Django Rest Framework and rest-auth. The frontend has react redux setup for user authentication by storing the token in localstorage.
+This repository contains a Django and React ecommerce project. Among other functionality, users can create their account, add items to their cart and purchase those items using Stripe.
 
-[Watch the tutorial on how to integrate Django and React](https://youtu.be/YKYVv0gm_0o)
+[Watch the tutorials on how to build this project](https://youtu.be/RG_Y7lIDXPM)
 
 ## Backend development workflow
 

@@ -23,7 +23,7 @@ from core.models import Item, OrderItem, Order, Address, Payment, Coupon, Refund
 
 import stripe
 
-#stripe.api_key = settings.STRIPE_SECRET_KEY
+stripe.api_key = settings.STRIPE_SECRET_KEY
 
 
 class UserIDView(APIView):
@@ -173,7 +173,7 @@ class PaymentView(APIView):
 
         try:
 
-                # charge the customer because we cannot charge the token more than once
+            # charge the customer because we cannot charge the token more than once
             charge = stripe.Charge.create(
                 amount=amount,  # cents
                 currency="usd",
