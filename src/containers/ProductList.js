@@ -2,9 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import axios from "axios";
 import {
-  Button,
+    Button,
   Container,
-  Dimmer,
+    Dimmer,
   Icon,
   Image,
   Item,
@@ -97,7 +97,7 @@ class ProductList extends React.Component {
                     >
                       Add to cart
                       <Icon name="cart plus" />
-                    </Button> }
+                    </Button>}
                     {item.discount_price && (
                       <Label
                         color={
