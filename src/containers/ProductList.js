@@ -3,8 +3,10 @@ import { connect } from "react-redux";
 import axios from "axios";
 import {
     Button,
+    Card,
   Container,
     Dimmer,
+    Grid,
   Icon,
   Image,
   Item,
@@ -69,26 +71,27 @@ class ProductList extends React.Component {
             <Image src="/images/wireframe/short-paragraph.png" />
           </Segment>
         )}
-        <Item.Group divided>
-          {data.map(item => {
-            return (
-              <Item key={item.id}>
-                <Item.Image src={item.image} />
-                <Item.Content>
-                  <Item.Header
-                    as="a"
+        
+            <Grid stackable columns={3}>
+                {data.map(item => {
+                            return (
+    <Grid.Column key={item.id}>
+                    
+                       
+                <Card>
+    <Image src={item.image} wrapped ui={false} />
+    <Card.Content>
+      <Card.Header as="a"
                     onClick={() =>
                       this.props.history.push(`/products/${item.id}`)
-                    }
-                  >
-                    {item.title}
-                  </Item.Header>
-                  <Item.Meta>
-                    <span className="cinema">{item.category}</span>
-                  </Item.Meta>
-                  <Item.Description>{item.description}</Item.Description>
-                  <Item.Extra>
-                    {<Button
+                    }>{item.title}</Card.Header>
+      <Card.Meta>
+        <span className="cinema">{item.category}</span>
+      </Card.Meta>
+      <Card.Description>{item.description}</Card.Description>
+    </Card.Content>
+    <Card.Content extra>
+      {<Button
                       primary
                       floated="right"
                       icon
@@ -97,8 +100,8 @@ class ProductList extends React.Component {
                     >
                       Add to cart
                       <Icon name="cart plus" />
-                    </Button>}
-                    {item.discount_price && (
+                                        </Button>}
+                                        {item.discount_price && (
                       <Label
                         color={
                           item.label === "primary"
@@ -111,12 +114,12 @@ class ProductList extends React.Component {
                         {item.label}
                       </Label>
                     )}
-                  </Item.Extra>
-                </Item.Content>
-              </Item>
-            );
+    </Card.Content>
+                                    </Card>
+                                    
+    </Grid.Column>);
           })}
-        </Item.Group>
+  </Grid>
       </Container>
     );
   }
